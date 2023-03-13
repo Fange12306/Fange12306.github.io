@@ -87,16 +87,10 @@ avatar: '/assets/img/avatar.png'
 toc: true
 
 comments:
-  active: 'valine'        # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
-  #disqus:
-  #  shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  valine:
-    comments: true            # 是否启用valine 
-    leancloud_appid:  g3d6pMvtAM9c8rHaXjZye1A5-MdYXbMMI        # 填入你的APP ID 
-    leancloud_appkey:   qW3aer2fuzjpRa615USx9SCo      # 填入你的APP Key 
-    placeholder: 点击此处发表一条评论    # 空白评论栏的占位符 
-    avatar: '/assets/img/avatar.png'
+  disqus:
+    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
     repo:         # <gh-username>/<repo>
@@ -204,3 +198,14 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+valine_comment:
+  enable: true
+  # app_id
+  leancloud_appid: g3d6pMvtAM9c8rHaXjZye1A5-MdYXbMMI
+  # app_key
+  leancloud_appkey: qW3aer2fuzjpRa615USx9SCo
+  # placeholder
+  placeholder: "点击以输入一条评论："
+  #avatar
+  avatar: '/assets/img/avatar.png'
