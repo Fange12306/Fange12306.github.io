@@ -131,12 +131,7 @@ tail_includes:
 
         {{ site.data.locales[site.lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
 
-      {% endif %}
-      
-      {% if site.valine_comment.enable and page.comments %}
-        {% include valine.html %}
-      {% endif %}
-      
+      {% endif %}   
     </div>
 
     {% include post-sharing.html %}
