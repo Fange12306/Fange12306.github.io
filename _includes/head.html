@@ -19,6 +19,11 @@
   {% endif %}
 
   {% capture seo_tags %}
+    {% if page.layout == 'post' %}
+      {% if site.valine.comments and page.comments %}
+        <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+      {% endif %}
+    {% endif %}
     {% seo title=false %}
   {% endcapture %}
 
