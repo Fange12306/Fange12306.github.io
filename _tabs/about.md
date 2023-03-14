@@ -9,9 +9,9 @@ order: 4
 
 > 我还是一名游戏玩家，欢迎来骚扰我：
 > 
->PSN: fange12123
+> PSN: fange12123
 >
->Steam ID: fange12306
+> Steam ID: fange12306
 >
->Nintendo FC: 2646 9537 5396
+> Nintendo FC: 2646 9537 5396
 {: .prompt-tip }
