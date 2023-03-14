@@ -118,7 +118,7 @@ valine_comment:
   # avatar
   avatar: mp
   #server
-  serverURLs: 'https://g3d6pmvt.api.lncldglobal.com'
+  serverURLs: 'https://g3d6pmvt.push.lncldglobal.com'
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
