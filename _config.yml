@@ -110,15 +110,15 @@ comments:
 valine_comment:
   enable: true
   # app_id
-  leancloud_appid: g3d6pMvtAM9c8rHaXjZye1A5-MdYXbMMI
+  leancloud_appid: Z20GnxgOg7TO4zOyWFlxdURc-9Nh9j0Va
   # app_key
-  leancloud_appkey: qW3aer2fuzjpRa615USx9SCo
+  leancloud_appkey: i406pmefOovXZYHRj4Rn0Rk2
   # placeholder
   placeholder: "点击发表一条评论："
   # avatar
   avatar: mp
   #server
-  serverURLs: 'https://g3d6pmvt.push.lncldglobal.com'
+  serverURLs: 'https://z20gnxgo.lc-cn-e1-shared.com'
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
