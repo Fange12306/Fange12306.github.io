@@ -15,4 +15,4 @@ order: 4
 >Steam ID: fange12306
 >
 >Nintendo FC: 2646 9537 5396
-{: .prompt-info }
+{: .prompt-tip }
