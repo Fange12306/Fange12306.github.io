@@ -5,11 +5,9 @@ categories: [编程, Github]
 tags: [网站搭建, Github Pages]     # TAG names should always be lowercase
 ---
 
-\quad 这篇帖子分享算是我搭建这个主页的过程中的一些经验，希望能帮助到一些也想用这个模板做主页特别是零基础的朋友们。
+&nbsp;这篇帖子分享算是我搭建这个主页的过程中的一些经验，希望能帮助到一些也想用这个模板做主页特别是零基础的朋友们。
 
 # 准备工作
-
-\quad
 
 ## 安装Git
 
