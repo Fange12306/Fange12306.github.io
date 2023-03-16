@@ -65,7 +65,7 @@ bash tools/init
 # 发布主页
 
 在上传发布之前我们首先，我们首先打开本地模板根目录下的`config.yml`，补全其中的
-```config.yml
+```console
 url = 'https://GitHub用户名.github.io'  #地址即填写为主页的域名
 ```
 然后我们要把初始化好的模板传上GitHub仓库覆盖掉原来的模板。运行`Git CMD`，输入以下命令将路径转至模板下：
