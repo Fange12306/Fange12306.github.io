@@ -1,5 +1,5 @@
 ---
-title: 搭建基于Chirpy模板的Github Pages主页
+title: 搭建基于Chirpy模板的GitHub Pages主页
 date: 2023-03-14 18:53:00 +0800
 categories: [编程, Github]
 tags: [网站搭建, Github Pages]     # TAG names should always be lowercase
@@ -35,14 +35,14 @@ bundler -v
 ```
 # 调用Chirpy模板
 
-官方给出的调用Chirpy模板有两种方式，一种是使用Chirpy Starter直接作为新模板编辑，这种方式比较简单，但是许多功能被阉割了，所以我采用了第二种方式：在Github上fork模板。
+官方给出的调用Chirpy模板有两种方式，一种是使用Chirpy Starter直接作为新模板编辑，这种方式比较简单，但是许多功能被阉割了，所以我采用了第二种方式：在GitHub上fork模板到仓库。
 
 ## 克隆到本地
 
-在Github打开[模板的网址](https://github.com/cotes2020/jekyll-theme-chirpy)，
-点击右上角的fork，然后把`Repository name`改成`Github用户名.github.io`，这是个人主页强制要求的，之后确定fork。随后运行`Git CMD`，输入以下命令：
+在GitHub打开[模板的网址](https://github.com/cotes2020/jekyll-theme-chirpy)，
+点击右上角的fork，然后把`Repository name`改成`GitHub用户名.github.io`，这是个人主页强制要求的，也将作为之后发布的主页的域名，之后确定fork。随后运行`Git CMD`，输入以下命令：
 ```console
-git clone https://github/Github用户名.github.io #地址为你fork的地址
+git clone https://github/GitHub用户名.github.io  #地址为你fork后的仓库的地址
 ```
 这样就把模板克隆到本地了，地址一般在C://User/Administrator下。
 
@@ -50,7 +50,7 @@ git clone https://github/Github用户名.github.io #地址为你fork的地址
 
 运行`Start Command Prompt with Ruby`，输入以下命令将路径转至模板下：
 ```console
-cd C://User/Administrator #地址为模板的本地路径
+cd C://User/Administrator/xxx  #地址为模板的本地路径
 ```
 随后输入以下命令为模板安装缺失的bundle:
 ```console
@@ -64,7 +64,31 @@ bash tools/init
 
 # 发布主页
 
+在上传发布之前我们首先，我们首先打开本地模板根目录下的`config.yml`，补全其中的
+```config.yml
+url = 'https://GitHub用户名.github.io'  #地址即填写为主页的域名
+```
+然后我们要把初始化好的模板传上GitHub仓库覆盖掉原来的模板。运行`Git CMD`，输入以下命令将路径转至模板下：
+```console
+cd C://User/Administrator/xxx  #地址为模板的本地路径
+```
+然后按顺序输入以下四步命令：
+```console
+git add .  #将本地文件存到暂存区  
+git commit -m “excu”  #将暂存区文件提交到本地仓库  
+git remote add origin https://github/GitHub用户名.github.io  #将本地仓库关联到GitHub仓库  
+git push -u origin master  #本地仓库上传到GitHub仓库（可能会要求输入用户名和密码）
+```
+这样我们就把初始化完成的模板上传完成了。之后打开GitHub仓库网址，点击上访工具栏最右边的`Settings`，之后点击左侧菜单列的`Pages`，在`Build and Development`中将`Source`选项选择`GitHub Actions`。
+这意味着可以通过文件的修改来触发主页的发布，之后一般等一段时间就可以在`Pages`页面右上角看到主页已发布的信息。
+
 # 更新配置
+
+之后主页的各种更新也可以直接更改本地文件，然后上传至GitHub仓库，步骤同上，只不过不用重复将本地仓库关联到GitHub仓库。下面列出一些可供自定义的配置
+
+## config.yml
+
+## 发布新帖子
 
 # 插入valine评论
 
