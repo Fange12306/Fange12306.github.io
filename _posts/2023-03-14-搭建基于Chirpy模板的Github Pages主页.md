@@ -14,22 +14,22 @@ tags: [网站搭建, Github Pages]     # TAG names should always be lowercase
 ## 安装Git
 
 打开[Git官网](https://git-scm.com/downloads)下载Git的安装包，按照指引完成安装（全部设置都选默认的就行）。运行`Git CMD`, 输入以下命令查看版本以确定是否安装成功：
-```Git CMD
+```console
 git --version
 ```
 
 ## 安装Ruby
 
 打开[Ruby官网](https://rubyinstaller.org/downloads/)下载Ruby的安装包（选择Ruby+Devkit），按照指引完成安装（全部设置都选默认的就行）。运行`Start Command Prompt with Ruby`, 输入以下命令查看版本以确定是否安装成功：
-```Start Command Prompt with Ruby
+```console
 ruby -v
 ```
 然后输入以下命令安装jekyII和Bundler：
-```Start Command Prompt with Ruby
+```console
 gem install jekyll bundler
 ```
 安装完可以输入以下命令查看版本：
-```Start Command Prompt with Ruby
+```console
 jekyII -v  
 bundler -v
 ```
@@ -41,7 +41,7 @@ bundler -v
 
 在Github打开[模板的网址](https://github.com/cotes2020/jekyll-theme-chirpy)，
 点击右上角的fork，然后把`Repository name`改成`Github用户名.github.io`，这是个人主页强制要求的，之后确定fork。随后运行`Git CMD`，输入以下命令：
-```Git CMD
+```console
 git clone https://github/Github用户名.github.io #地址为你fork的地址
 ```
 这样就把模板克隆到本地了，地址一般在C://User/Administrator下。
@@ -49,15 +49,15 @@ git clone https://github/Github用户名.github.io #地址为你fork的地址
 ## 初始化模板
 
 运行`Start Command Prompt with Ruby`，输入以下命令将路径转至模板下：
-```Start Command Prompt with Ruby
+```console
 cd C://User/Administrator #地址为模板的本地路径
 ```
 随后输入以下命令为模板安装缺失的bundle:
-```Start Command Prompt with Ruby
+```console
 bundle
 ```
 然后输入以下命令初始化模板：
-```Start Command Prompt with Ruby
+```console
 bash tools/init
 ```
 这是比较重要的一步，根据官方的说法，这个初始化主要是删除了一些文件，如果不执行这一步，发布网页的时候网页会显示异常。
