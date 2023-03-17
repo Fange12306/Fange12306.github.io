@@ -105,7 +105,8 @@ valine:
 ```
 {: file="_config.yml" }
 
-之后在根目录`_includes`文件夹下创建文件`valine.html`，键入以下字段（复制粘贴后删除`/{%`的`/`）：
+之后在根目录`_includes`文件夹下创建文件`valine.html`，键入以下字段（复制粘贴后删除`/{%}`的`/`）：
+
 ```console
 /{% if site.valine.enable %}
 <div id="comments"></div>
@@ -126,7 +127,8 @@ valine:
 ```
 {: file="_includes/valine.html" }
 
-之后在根目录`_layouts`文件夹下打开文件`page.html`，键入以下字段（复制粘贴后删除`/{%`的`/`）：
+之后在根目录`_layouts`文件夹下打开文件`page.html`，键入以下字段（复制粘贴后删除`/{%}`的`/`）：
+
 ```console
 /{% if site.valine_comment.enable and page.comments %}
 <div class="row">
