@@ -104,6 +104,7 @@ valine:
   serverURLs: 'https://xxxxxxxxxxxx'  #LeanCloud应用的REST API 服务器地址
 ```
 {: file="_config.yml" }
+
 之后在根目录`_includes`文件夹下创建文件`valine.html`，键入以下字段：
 ```console
 {% if site.valine.enable %}
@@ -124,6 +125,7 @@ valine:
 {% endif %}
 ```
 {: file="_includes/valine.html" }
+
 之后在根目录`_layouts`文件夹下打开文件`page.html`，键入以下字段：
 ```console
 {% if site.valine_comment.enable and page.comments %}
