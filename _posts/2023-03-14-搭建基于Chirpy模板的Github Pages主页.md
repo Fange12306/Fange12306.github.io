@@ -105,39 +105,37 @@ valine:
 ```
 {: file="_config.yml" }
 
-之后在根目录`_includes`文件夹下创建文件`valine.html`，键入以下字段（复制粘贴后删除前面的`/`）：
+之后在根目录`_includes`文件夹下创建文件`valine.html`，键入以下字段（复制粘贴后删除`/{%`的`/`）：
 ```console
 /{% if site.valine.enable %}
-/<div id="comments"></div>
-/<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-/<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-/<script>
-/  new Valine({
-/    el: '#comments',
-/    app_id: '{{ site.valine.leancloud_appid }}',
-/    app_key: '{{ site.valine.leancloud_appkey }}',
-/    placeholder: '{{ site.valine.placeholder }}',
-/    avatar: '{{ site.valine.avatar }}',
-/    serverURLs: '{{ site.valine.serverURLs }}',
-/    visitor: true
-/  });
-/</script>
+<div id="comments"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+  new Valine({
+    el: '#comments',
+    app_id: '{{ site.valine.leancloud_appid }}',
+    app_key: '{{ site.valine.leancloud_appkey }}',
+    placeholder: '{{ site.valine.placeholder }}',
+    avatar: '{{ site.valine.avatar }}',
+    serverURLs: '{{ site.valine.serverURLs }}',
+    visitor: true
+  });
+</script>
 /{% endif %}
 ```
 {: file="_includes/valine.html" }
 
-之后在根目录`_layouts`文件夹下打开文件`page.html`，键入以下字段（复制粘贴后删除前面的`/`）：
+之后在根目录`_layouts`文件夹下打开文件`page.html`，键入以下字段（复制粘贴后删除`/{%`的`/`）：
 ```console
 /{% if site.valine_comment.enable and page.comments %}
-/<div class="row">
-/  <div class="col-12 col-lg-11 col-xl-8">
-/    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-/
-/      {% include valine.html %}
-/
-/    </div> <!-- .pl-1 pr-1 -->
-/  </div> <!-- .col-12 -->
-/</div> <!-- .row -->
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+      /{% include valine.html %}
+    </div> <!-- .pl-1 pr-1 -->
+  </div> <!-- .col-12 -->
+</div> <!-- .row -->
 /{% endif %}
 ```
 {: file="_layouts/page.html" }
