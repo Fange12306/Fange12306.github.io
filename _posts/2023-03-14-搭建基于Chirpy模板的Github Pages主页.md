@@ -92,7 +92,37 @@ git push -u origin master  #本地仓库上传到GitHub仓库（可能会要求�
 
 # 插入valine评论
 
-Chirpy模板自带有disqus评论系统，但是由于disqus无法支持匿名评论，且需要挂梯子，所以我选择了valine评论。首先打开[Leancloud](https://console-e1.leancloud.cn/)，这里选择华东和华北区都行，但是不要选择国际版，
-因为国际版的评论链接已经不可用了。点击右上角`Console`注册账号，登陆后选择`创建应用`，并选择开发版，创建好了点进应用`设置`里的`应用凭证`，查看
+Chirpy模板自带有disqus评论系统，但是由于disqus无法支持匿名评论，且需要挂梯子，所以我选择了valine评论。首先打开[LeanCloud](https://console-e1.leancloud.cn/)，这里选择华东和华北区都行，但是不要选择国际版，
+因为国际版的评论链接已经不可用了。点击右上角`Console`注册账号，登陆后选择`创建应用`，并选择开发版，创建好了点进应用`设置`里的`应用凭证`，查看`AppID`、`AppKey`以及`REST API 服务器地址`。编辑位于模板根目录的`_config.yml`，键入以下字段：
+```console
+valine:
+  enable: true  #是否启用valine
+  leancloud_appid: xxxxxxxxxxxxx  #LeanCloud应用的AppID
+  leancloud_appkey: xxxxxxxxxxxxx  #LeanCloud应用的AppKey
+  placeholder: "点击发表一条评论："  #评论区的占位文本
+  avatar: mp  #评论用户的头像
+  serverURLs: 'https://xxxxxxxxxxxx'  #LeanCloud应用的REST API 服务器地址
+```
+{: file="_config.yml" }
+之后在根目录`_includes`文件夹下创建文件`valine.html`，键入以下字段：
+```console
+{% if site.valine.enable %}
+<div id="comments"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+  new Valine({
+    el: '#comments',
+    app_id: '{{ site.valine.leancloud_appid }}',
+    app_key: '{{ site.valine.leancloud_appkey }}',
+    placeholder: '{{ site.valine.placeholder }}',
+    avatar: '{{ site.valine.avatar }}',
+    serverURLs: '{{ site.valine.serverURLs }}',
+    visitor: true
+  });
+</script>
+{% endif %}
+```
+{: file="_includes/valine.html" }
 
 
