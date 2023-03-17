@@ -14,7 +14,6 @@ tags: [网站搭建, Github Pages]     # TAG names should always be lowercase
 ## 安装Git
 
 打开[Git官网](https://git-scm.com/downloads)下载Git的安装包，按照指引完成安装（全部设置都选默认的就行）。运行`Git CMD`, 输入以下命令查看版本以确定是否安装成功：
-````Git CMD
 ```console
 git --version
 ```
@@ -85,12 +84,15 @@ git push -u origin master  #本地仓库上传到GitHub仓库（可能会要求�
 
 # 更新配置
 
-之后主页的各种更新也可以直接更改本地文件，然后上传至GitHub仓库，步骤同上，只不过不用重复将本地仓库关联到GitHub仓库。下面列出一些可供自定义的配置
+之后主页的各种更新也可以直接更改本地文件，然后上传至GitHub仓库，步骤同上，只不过不用重复将本地仓库关联到GitHub仓库。下面列出一些可供自定义的配置:
 
-## config.yml
+## 全局设置
 
 ## 发布新帖子
 
 # 插入valine评论
+
+Chirpy模板自带有disqus评论系统，但是由于disqus无法支持匿名评论，且需要挂梯子，所以我选择了valine评论。首先打开[Leancloud](https://console-e1.leancloud.cn/)，这里选择华东和华北区都行，但是不要选择国际版，
+因为国际版的评论链接已经不可用了。点击右上角`Console`注册账号，登陆后选择`创建应用`，并选择开发版，创建好了点进应用`设置`里的`应用凭证`，查看
 
 
