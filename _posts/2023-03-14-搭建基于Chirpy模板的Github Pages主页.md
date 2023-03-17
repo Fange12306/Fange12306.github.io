@@ -14,6 +14,7 @@ tags: [网站搭建, Github Pages]     # TAG names should always be lowercase
 ## 安装Git
 
 打开[Git官网](https://git-scm.com/downloads)下载Git的安装包，按照指引完成安装（全部设置都选默认的就行）。运行`Git CMD`, 输入以下命令查看版本以确定是否安装成功：
+````Git CMD
 ```console
 git --version
 ```
