@@ -84,11 +84,35 @@ git push -u origin master  #本地仓库上传到GitHub仓库（可能会要求�
 
 # 更新配置
 
-之后主页的各种更新也可以直接更改本地文件，然后上传至GitHub仓库，步骤同上，只不过不用重复将本地仓库关联到GitHub仓库。下面列出一些可供自定义的配置:
-
-## 全局设置
-
-## 发布新帖子
+之后主页的各种更新也可以直接更改本地文件，然后上传至GitHub仓库，步骤同上，只不过不用重复将本地仓库关联到GitHub仓库。全局配置的更改可以通过更改根目录下的`_config.yml`文件来实现，下面列出一些可供自定义的配置:
+```console
+lang: zh-CN  #系统语言，格式对应根目录下的`_data/locales`。  
+   
+title: Fange  #主标题  
+tagline: 一个简单的个人主页  #主标题的简单介绍  
+  
+github:    
+  username: fange12306  #左下角GitHub标志对应的跳转页面       
+twitter:  
+  username: fange12123  #左下角Twitter标志对应的跳转页面    
+  
+social:
+  name: Yufan Wang  #网页中间最下面的保留权利人姓名  
+  email: 11910902@mail.sustech.edu.cn  #左下角Email标志对应的跳转页面  
+  links:  
+    # 点击前面姓名跳转的页面，-为开启，#为关闭，若开启多个，展示最前面的一个  
+    # https://twitter.com/username      
+    - https://github.com/fange12306      
+    # https://www.facebook.com/username  
+    # https://www.linkedin.com/in/username   
+  
+theme_mode:  #色调模式，有黑和白两种，若不填写左下角会有切换按钮  
+  
+avatar: '/assets/img/avatar.png'  #左上角头像  
+  
+  
+```
+{: file="_config.yml" }
 
 # 插入valine评论
 
